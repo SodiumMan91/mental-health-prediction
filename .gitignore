@@ -1,0 +1,23 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+venv/
+.env/
+.venv/
+
+# Distribution / packaging
+.eggs/
+*.egg-info/
+dist/
+build/
+
+# VSCode settings
+.vscode/
+
+# Mac OS system files
+.DS_Store
