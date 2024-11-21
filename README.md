@@ -1,2 +1,12 @@
-# mental-health-prediction
-This project predicts poor mental health prevalence in neighborhoods using demographic, socioeconomic, and environmental data. It involves data analysis, feature engineering, and machine learning to identify key factors and high-risk areas, aiming to provide insights for public health interventions.
+# Mental Health Prediction Project
+
+This project aims to predict the prevalence of poor mental health in neighborhoods using demographic, socioeconomic, and environmental factors. By analyzing community-level data, the model identifies key predictors of mental health outcomes and highlights high-risk areas. The project utilizes data processing, exploratory data analysis (EDA), machine learning modeling, and visualization techniques to provide insights into public health challenges and inform targeted interventions.
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+Clone this repository to your local system:
+```bash
+git clone https://github.com/your-username/mental-health-prediction.git
+cd mental-health-prediction
