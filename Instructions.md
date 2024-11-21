@@ -65,3 +65,11 @@ nbdime config-git --enable
 ```
 
 This will make it easier to resolve conflicts in notebooks.
+
+## Step 5: Pull the changes from remote repo to local repo
+
+There have been some changes in the main branch since you last worked on it. Run the code below to sync them into your local system.
+
+```
+git pull origin main
+```
