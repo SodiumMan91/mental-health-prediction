@@ -73,3 +73,20 @@ There have been some changes in the main branch since you last worked on it. Run
 ```
 git pull origin main
 ```
+
+## Step 6: Use GitHub data remotely
+
+See below example to use the data in data/data.csv remotely if you do not want to download it.
+
+```python
+import pandas as pd
+
+# URL of the raw CSV file in your GitHub repository
+url = "https://raw.githubusercontent.com/SodiumMan91/mental-health-prediction/refs/heads/main/data/data.csv"
+
+df = pd.read_csv(url)
+```
+The url here refers to our actual data so there is no need to update it.
+
+
+
