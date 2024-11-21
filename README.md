@@ -10,6 +10,6 @@ Clone this repository to your local system:
 ```bash
 git clone https://github.com/SodiumMan91/mental-health-prediction.git
 cd mental-health-prediction
-
+```
 ## General Instructions for using the repo
 Refer to the file at [Instructions.md](Instructions.md)
