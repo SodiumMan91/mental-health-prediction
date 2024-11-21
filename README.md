@@ -8,5 +8,5 @@ This project aims to predict the prevalence of poor mental health in neighborhoo
 
 Clone this repository to your local system:
 ```bash
-git clone https://github.com/your-username/mental-health-prediction.git
+git clone https://github.com/SodiumMan91/mental-health-prediction.git
 cd mental-health-prediction
