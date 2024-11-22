@@ -85,6 +85,7 @@ import pandas as pd
 url = "https://raw.githubusercontent.com/SodiumMan91/mental-health-prediction/refs/heads/main/data/data.csv"
 
 df = pd.read_csv(url)
+df = df.drop(['Unnamed: 0.1', 'Unnamed: 0'], axis = 1)
 ```
 The url here refers to our actual data so there is no need to update it.
 
