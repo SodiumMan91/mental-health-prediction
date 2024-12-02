@@ -7,14 +7,27 @@ This project aims to predict the prevalence of poor mental health in neighborhoo
 
 This project used 3 datasets:
 
-1. CDC Places: Contains census tract-level data regarding diseases and demographic 
-2. Smart Location: Contains census tract-level data regarding land use, transportation, and more
-3. New York Government Hospital Data: Contains information about each hospital in New York
+1. [CDC Places](https://www.cdc.gov/places/about/index.html) : Contains census tract-level data regarding diseases and demographic 
+2. [Smart Location](https://www.epa.gov/smartgrowth/smart-location-mapping#SLD) : Contains census tract-level data regarding land use, transportation, and more
+3. [New York Government Hospital Data](https://www.epa.gov/smartgrowth/smart-location-mapping#SLD) : Contains information about each hospital in New York
 
 The CDC Places dataset and the SLD dataset were joined using GeoPandas. This was done by combining the region boundary column of the SLD dataset (a list of points making up the region boundary) and the lat/long points in the CDC dataset. This information suffices for GeoPandas to identify which CDC points fit within which SLD regions. The NY Hospital dataset was not explicitly joined to the remaining data but was instead used to create a new feature, "Distance to Nearest Hospital". Using the latitude and longitude for each hospital as well as the lat/long for each county, the Haversine formula was used to exhaustively find the nearest hospital to each county to populat the Distance to Nearest Hospital feature. 
 
 
 ## Goals
 In our project we try to answer the following two questions:
-1. Identify the most significant factors contributing to poor mental health prevalence. [Report](Feature_Importance.md) [Notebook](notebooks/random_forest_xg_boost.ipynb)
+1. Identify the most significant factors contributing to poor mental health prevalence. [Detailed Report](Feature_Importance.md) [Notebook](notebooks/random_forest_xg_boost.ipynb)
 2. Analyze the relationship between proximity to healthcare facilities and mental health rates. [Report](Regression_Analysis.md) [Notebook 1](notebooks/reg_SLD_data_on_mental_health.ipynb) [Notebook 2](notebooks/reg.ipynb)
+
+### Feature Importance Analysis
+
+The analysis aimed to identify key predictors of mental health issues, specifically crude prevalence (MHLTH_CrudePrev) at the census tract level, using tree-based machine learning models and interpretability tools. Random Forest Regressor and XGBoost Regressor were employed to determine feature importance, while SHAP (SHapley Additive exPlanations) provided model-agnostic insights into the contributions of each feature.
+
+The dataset, after preprocessing and dimensionality reduction, included 69 features and 5,289 rows. Key findings revealed that Cognition Crude Prevalence (COGNITION_CrudePrev) was the most significant predictor, followed by Depression Crude Prevalence (DEPRESSION_CrudePrev). Other notable predictors included comorbid conditions like Asthma (CASTHMA_CrudePrev) and Binge Drinking (BINGE_CrudePrev), as well as physical health factors like Obesity (OBESITY_CrudePrev) and Diabetes (DIABETES_CrudePrev).
+
+Random Forest highlighted COGNITION_CrudePrev as the dominant predictor, while XGBoost provided a more distributed importance across multiple features. SHAP summary plots revealed strong positive correlations between the top features and mental health outcomes.
+
+Key actionable insights include focusing on cognitive health, expanding access to depression treatment, and addressing comorbid behaviors like asthma and binge drinking. Regional interventions tailored to specific census tract health profiles are recommended for maximum impact. Further validation and spatial analysis are needed to enhance the generalizability of the findings.
+
+
+### Healthcare facilities relation analysis
