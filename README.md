@@ -27,7 +27,25 @@ The dataset, after preprocessing and dimensionality reduction, included 69 featu
 
 Random Forest highlighted COGNITION_CrudePrev as the dominant predictor, while XGBoost provided a more distributed importance across multiple features. SHAP summary plots revealed strong positive correlations between the top features and mental health outcomes.
 
+### Regression Analysis for Mental Health Prevalence
+This analysis explores the relationship between socio-economic, housing, and mobility features and the prevalence of mental health distress (MHLTH_CrudePrev). Using linear, ridge, and lasso regression models, the study identifies key factors that influence mental distress, with the goal of informing public health interventions.
+
+#### Key Findings:
+##### Negative Coefficients (Factors reducing mental distress):
+
+1. Higher income, car ownership, and proximity to work (e.g., Pct_AO1, Pct_AO2p, R_HiWageWk).
+2. Better access to transit services (D4d, D4c) and more jobs within travel time (D5ar).
+
+These factors indicate that wealth and mobility are associated with improved mental health outcomes.
+
+##### Positive Coefficients (Factors increasing mental distress):
+
+1. Urban density and infrastructure, including factors like population age (P_WrkAge), network density (D3AMM, D3APO), and proximity to transit (D4a, D5cr).
+
+These factors suggest that living in more developed and densely populated areas increases the risk of mental distress, likely due to crowded environments and long commutes.
+
+#### Conclusion:
+Socio-economic factors like income and car ownership are linked to better mental health, while urban density and long commutes are associated with increased mental distress. Public health interventions could focus on improving economic conditions and addressing urban density to reduce mental health issues.
+
 Key actionable insights include focusing on cognitive health, expanding access to depression treatment, and addressing comorbid behaviors like asthma and binge drinking. Regional interventions tailored to specific census tract health profiles are recommended for maximum impact. Further validation and spatial analysis are needed to enhance the generalizability of the findings.
 
-
-### Healthcare facilities relation analysis
