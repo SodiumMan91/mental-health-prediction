@@ -5,7 +5,7 @@ This project aims to predict the prevalence of poor mental health in neighborhoo
 ## Datasets used, preprocessing and joining the datasets.
 We briefly explain the datasets we used and the feature engineering in [this document](Datasets_Feature_Engineering.md)
 
-## Tasks performed
+## Goals
+In our project we try to answer the following two questions:
 1. Identify the most significant factors contributing to poor mental health prevalence. [Report](Feature_Importance.md) [Notebook](notebooks/random_forest_xg_boost.ipynb)
 2. Analyze the relationship between proximity to healthcare facilities and mental health rates. [Report](Regression_Analysis.md) [Notebook 1](notebooks/reg_SLD_data_on_mental_health.ipynb) [Notebook 2](notebooks/reg.ipynb)
-3. Predict high-risk neighborhoods and recommend facility placement. [Notebook](notebooks/k-means.ipynb)
