@@ -1,80 +1,39 @@
-**Regression Analysis**
+# Feature Importance and Regression Analysis for Mental Health Prevalence
+This analysis examines the relationship between various socio-economic, housing, and mobility features and the prevalence of mental health distress (MHLTH_CrudePrev). Using regression models, the study identifies key factors that either exacerbate or alleviate mental distress, helping policymakers target specific risk factors for intervention.
 
-This analysis seeks to model the relationships between key predictors and the target variable, MHLTH_CrudePrev (mental health prevalence). Regression analysis quantifies these relationships, identifies significant features influencing mental health outcomes, and evaluates the predictive power of multiple models. By doing so, we aim to provide actionable insights for policymakers to target specific risk factors effectively.
+## Key Findings from Feature Importance and Regression Models
+### Regression Models Employed:
 
-**Choice of Regression Models**
+1. Linear Regression: Baseline model to understand simple relationships between predictors and mental health outcomes.
+2. Ridge Regression: Applies L2 regularization to prevent overfitting by addressing multicollinearity.
+3. Lasso Regression: Uses L1 regularization for feature selection, focusing on significant predictors and reducing less important ones.
+4. Preprocessing and Assumptions: The dataset, containing 5,289 rows and 76 features, was cleaned and standardized. Categorical variables were one-hot encoded, and multicollinearity was addressed through regularization techniques. Assumptions for linearity, homoscedasticity, and normality were verified.
 
-To capture linear relationships and handle multicollinearity, we employed the following regression models:
+### Coefficients and Variable Analysis
+The regression analysis revealed several key insights:
 
-1. Linear Regression: A baseline model for understanding basic relationships between predictors and the target variable.
-2. Ridge Regression: Introduces L2 regularization to reduce the influence of collinear predictors and prevent overfitting.
-3. Lasso Regression: Uses L1 regularization for feature selection by shrinking less important coefficients to zero.
+#### Negative Coefficients (Factors that reduce mental distress):
+1. Pct_AO1: Percent of one-car households in the census block group (CBG) in 2018.
+2. Pct_AO2p: Percent of two-plus-car households in CBG in 2018.
+3. R_HiWageWk: Count of workers earning $3333/month or more in 2017.
+4. D4d: Aggregate frequency of transit service [D4c] per square mile.
+5. D4c: Frequency of transit service within 0.25 miles of CBG boundary during evening peak periods (2020).
+6. D5ar: Jobs within 45 minutes of auto travel time, weighted by time-decay in 2020.
+These variables, which reflect household wealth and mobility, show a negative relationship with mental distress, suggesting that higher income, car ownership, and proximity to work are associated with better mental health outcomes.
 
-**Methodology**
+#### Positive Coefficients (Factors that increase mental distress):
+1. P_WrkAge: Percent of the working-age population (18 to 64 years).
+2. D3AMM: Network density in terms of multi-modal facility miles per square mile.
+3. D3APO: Network density in terms of pedestrian-oriented facility miles per square mile.
+4. D4a: Distance from population-weighted centroid to nearest transit stop (2020).
+5. D5cr: Proportional accessibility to regional destinations (auto).
+6. D5cri: Regional centrality index based on accessibility to regional destinations (auto).
+These variables, associated with urban density, mobility, and centrality, indicate that living in more densely populated and developed urban areas increases the risk of mental distress. The negative effects of urbanization, including long commutes, transit service density, and high pedestrian activity, seem to contribute to higher levels of mental health issues.
 
-**Data Preparation**
+###Conclusion and Implications
+The analysis highlights how socio-economic factors, such as income, car ownership, and proximity to work, contribute to lower mental health distress, emphasizing the importance of household wealth and mobility in promoting mental well-being. Conversely, urbanization and high-density living are linked to higher mental distress, suggesting that factors like crowded environments, limited access to open spaces, and long commutes may have adverse effects on mental health.
 
-- The dataset was preprocessed to handle missing values, standardize numerical features, and encode categorical variables.
-- Numerical features were scaled using StandardScaler, and categorical variables were one-hot encoded to create a high-dimensional feature matrix.
-- The final dataset contained 5,289 rows and 76 features after cleaning.
+These insights can guide public health interventions by focusing on:
 
-**Regression Techniques**
-
-- Linear Regression - Fits a simple linear model without regularization, serving as a baseline for comparison.
-- Ridge Regression - Includes L2 regularization to minimize overfitting and improve generalization by penalizing large coefficients.
-- Lasso Regression - Applies L1 regularization to enforce sparsity in coefficients, which is beneficial for feature selection in high-dimensional data.
-
-**Assumption Testing**
-
-Assumptions for linear regression were verified:
-
-- Linearity: Examined using scatter plots between predictors and the target variable.
-- Homoscedasticity: Residual plots indicated constant variance across predictions.
-- Multicollinearity: Regularization in Ridge and Lasso addressed issues of multicollinearity effectively.
-- Normality: Residuals were approximately normal, as assessed through visualizations.
-
-**Results**
-
-**Model Performance Metrics**:
-
-- **Linear Regression**:
-  - Cross-validation scores: \[-0.00446, -0.00231, -0.00073\], mean CV score: -0.00165.
-  - Indicates poor performance with potential overfitting or underfitting.
-- **Ridge Regression**:
-  - Cross-validation scores: \[0.9923, 0.9940, 0.9931\], mean CV score: 0.9934.
-  - Outperformed other models with high predictive accuracy and better generalization.
-- **Lasso Regression**:
-  - Cross-validation scores: \[-0.00446, -0.00231, -0.00073\], mean CV score: -0.00165.
-  - Similar to Linear Regression, indicating potential underfitting due to aggressive feature selection.
-
-**Residual Analysis**:
-
-- **Linear Regression**: Residuals were evenly scattered around zero but had a wider spread, indicating an acceptable fit with room for improvement.
-- **Ridge Regression**: Residuals were tighter and evenly distributed, demonstrating better control over overfitting.
-- **Lasso Regression**: Residuals had a wider spread, suggesting underfitting due to over-regularization.
-
-**Regularization Insights**:
-
-- Ridge regression's regularization resulted in smaller, more stable coefficients without eliminating features entirely.
-- Lasso regression aggressively selected features, which might have excluded some important variables, leading to potential loss of predictive power.
-
-**Key Findings**
-
-**Significant Predictors:** Ridge regression identified multiple significant predictors, including cognitive health (COGNITION_CrudePrev) and depression prevalence (DEPRESSION_CrudePrev).
-
-**Model Performance:** Ridge regression achieved the highest R-squared score and outperformed other models in predictive accuracy.
-
-**Regularization Impact:** Ridge addressed multicollinearity effectively, while Lasso’s aggressive feature selection resulted in underfitting.
-
-**Limitations and Future Work**
-
-**Model Limitations:**
-
-- Linear regression struggled with multicollinearity and high-dimensional data.
-- Lasso regression’s tendency to underfit highlights the need to tune its hyperparameters further.
-
-**Future Work:**
-
-- Explore more complex models such as ElasticNet, which combines L1 and L2 regularization.
-- Include interaction terms or nonlinear transformations to capture more complex relationships.
-- Validate models on external datasets to ensure generalizability.
+1. Improving economic conditions: Programs to increase income and promote car ownership may reduce mental distress.
+2. Addressing urban density: Urban planning policies that reduce crowding, improve access to green spaces, and provide better public transport may mitigate the negative effects of living in densely populated areas.
