@@ -17,7 +17,7 @@ The CDC Places dataset and the SLD dataset were joined using GeoPandas. This was
 ## Goals
 In our project we try to answer the following two questions:
 1. Identify the most significant factors contributing to poor mental health prevalence. [Detailed Report](Feature_Importance.md) [Notebook](notebooks/random_forest_xg_boost.ipynb)
-2. Analyze the relationship between living conditions and mental health rates. [Report](Regression_Analysis.md) [Notebook](notebooks/reg.ipynb)
+2. Analyze the relationship between living conditions and mental health rates. [Detailed Report](Regression_Analysis.md) [Notebook](notebooks/reg.ipynb)
 
 ## Feature Importance Analysis
 
@@ -26,6 +26,9 @@ The analysis aimed to identify key predictors of mental health issues, specifica
 The dataset, after preprocessing and dimensionality reduction, included 69 features and 5,289 rows. Key findings revealed that Cognition Crude Prevalence (COGNITION_CrudePrev) was the most significant predictor, followed by Depression Crude Prevalence (DEPRESSION_CrudePrev). Other notable predictors included comorbid conditions like Asthma (CASTHMA_CrudePrev) and Binge Drinking (BINGE_CrudePrev), as well as physical health factors like Obesity (OBESITY_CrudePrev) and Diabetes (DIABETES_CrudePrev).
 
 Random Forest highlighted COGNITION_CrudePrev as the dominant predictor, while XGBoost provided a more distributed importance across multiple features. SHAP summary plots revealed strong positive correlations between the top features and mental health outcomes.
+
+![image](https://github.com/user-attachments/assets/8b8502d3-8816-417b-9cc1-35dcdac130b5)
+
 
 ## Regression Analysis for Mental Health Prevalence
 This analysis explores the relationship between socio-economic, housing, and mobility features and the prevalence of mental health distress (MHLTH_CrudePrev). Using linear, ridge, and lasso regression models, the study identifies key factors that influence mental distress, with the goal of informing public health interventions.
@@ -43,6 +46,8 @@ These factors indicate that wealth and mobility are associated with improved men
 1. Urban density and infrastructure, including factors like population age (P_WrkAge), network density (D3AMM, D3APO), and proximity to transit (D4a, D5cr).
 
 These factors suggest that living in more developed and densely populated areas increases the risk of mental distress, likely due to crowded environments and long commutes.
+
+![image](https://github.com/user-attachments/assets/a6242e1d-177b-4ff3-83de-2c4240e8c68f)
 
 #### Conclusion:
 Socio-economic factors like income and car ownership are linked to better mental health, while urban density and long commutes are associated with increased mental distress. Public health interventions could focus on improving economic conditions and addressing urban density to reduce mental health issues.
