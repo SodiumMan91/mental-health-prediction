@@ -17,9 +17,9 @@ The CDC Places dataset and the SLD dataset were joined using GeoPandas. This was
 ## Goals
 In our project we try to answer the following two questions:
 1. Identify the most significant factors contributing to poor mental health prevalence. [Detailed Report](Feature_Importance.md) [Notebook](notebooks/random_forest_xg_boost.ipynb)
-2. Analyze the relationship between proximity to healthcare facilities and mental health rates. [Report](Regression_Analysis.md) [Notebook 1](notebooks/reg_SLD_data_on_mental_health.ipynb) [Notebook 2](notebooks/reg.ipynb)
+2. Analyze the relationship between living conditions and mental health rates. [Report](Regression_Analysis.md) [Notebook](notebooks/reg.ipynb)
 
-### Feature Importance Analysis
+## Feature Importance Analysis
 
 The analysis aimed to identify key predictors of mental health issues, specifically crude prevalence (MHLTH_CrudePrev) at the census tract level, using tree-based machine learning models and interpretability tools. Random Forest Regressor and XGBoost Regressor were employed to determine feature importance, while SHAP (SHapley Additive exPlanations) provided model-agnostic insights into the contributions of each feature.
 
@@ -27,7 +27,7 @@ The dataset, after preprocessing and dimensionality reduction, included 69 featu
 
 Random Forest highlighted COGNITION_CrudePrev as the dominant predictor, while XGBoost provided a more distributed importance across multiple features. SHAP summary plots revealed strong positive correlations between the top features and mental health outcomes.
 
-### Regression Analysis for Mental Health Prevalence
+## Regression Analysis for Mental Health Prevalence
 This analysis explores the relationship between socio-economic, housing, and mobility features and the prevalence of mental health distress (MHLTH_CrudePrev). Using linear, ridge, and lasso regression models, the study identifies key factors that influence mental distress, with the goal of informing public health interventions.
 
 #### Key Findings:
