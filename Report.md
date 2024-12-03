@@ -135,7 +135,7 @@ These variables, which reflect household wealth and mobility, show a negative re
 6. `D5cri`: Regional centrality index based on accessibility to regional destinations (auto).
 These variables, associated with urban density, mobility, and centrality, indicate that living in more densely populated and developed urban areas increases the risk of mental distress. The negative effects of urbanization, including long commutes, transit service density, and high pedestrian activity, seem to contribute to higher levels of mental health issues.
 
-###Conclusion and Implications
+### Conclusion and Implications
 The analysis highlights how socio-economic factors, such as income, car ownership, and proximity to work, contribute to lower mental health distress, emphasizing the importance of household wealth and mobility in promoting mental well-being. Conversely, urbanization and high-density living are linked to higher mental distress, suggesting that factors like crowded environments, limited access to open spaces, and long commutes may have adverse effects on mental health.
 
 These insights can guide public health interventions by focusing on:
