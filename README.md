@@ -22,7 +22,7 @@ In addition to combining the three datasets, our pre-processing work included:
 
 These details about preprocessing can be found [here](Preprocessing_Details.pdf)
 
-## Goals
+## Goals | [Overall Report](Report.md)
 In our project we try to answer the following two questions:
 1. Identify the most significant factors contributing to poor mental health prevalence. [Detailed Report](Feature_Importance.md) | [Notebook](notebooks/random_forest_xg_boost.ipynb)
 2. Analyze the relationship between living conditions and mental health rates. [Detailed Report](Regression_Analysis.md) | [Notebook](notebooks/reg.ipynb)
