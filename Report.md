@@ -14,6 +14,7 @@ This project used 3 datasets:
 The CDC Places dataset and the SLD dataset were joined using GeoPandas. This was done by combining the region boundary column of the SLD dataset (a list of points making up the region boundary) and the lat/long points in the CDC dataset. This information suffices for GeoPandas to identify which CDC points fit within which SLD regions. The NY Hospital dataset was not explicitly joined to the remaining data but was instead used to create a new feature, "Distance to Nearest Hospital". Using the latitude and longitude for each hospital as well as the lat/long for each county, the Haversine formula was used to exhaustively find the nearest hospital to each county to populat the Distance to Nearest Hospital feature. 
 
 In addition to combining the three datasets, our pre-processing work included:
+
 1. Filtering SLD and CDC datasets down to the state of New York, our desired scope
 2. Dropped highly correlated features using correlation plots for SLD and CDC datasets
 3. Dropped features populated primarily with meaningless NA values (insufficient sample)
@@ -24,8 +25,8 @@ These details about preprocessing can be found [here](https://github.com/SodiumM
 
 # Goals
 In our project we try to answer the following two questions:
-1. Identify the most significant factors contributing to poor mental health prevalence. [Detailed Report](https://github.com/SodiumMan91/mental-health-prediction/blob/main/Feature_Importance.md) | [Notebook](https://github.com/SodiumMan91/mental-health-prediction/blob/main/notebooks/random_forest_xg_boost.ipynb)
-2. Analyze the relationship between living conditions and mental health rates. [Detailed Report](https://github.com/SodiumMan91/mental-health-prediction/blob/main/Regression_Analysis.md) | [Notebook](https://github.com/SodiumMan91/mental-health-prediction/blob/main/notebooks/reg_SLD_data_on_mental_health.ipynb)
+1. Identify the most significant factors contributing to poor mental health prevalence. | [Notebook](https://github.com/SodiumMan91/mental-health-prediction/blob/main/notebooks/random_forest_xg_boost.ipynb)
+2. Analyze the relationship between living conditions and mental health rates. | [Notebook](https://github.com/SodiumMan91/mental-health-prediction/blob/main/notebooks/reg_SLD_data_on_mental_health.ipynb)
 
 # Feature Importance
 
