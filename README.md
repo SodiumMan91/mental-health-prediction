@@ -24,10 +24,10 @@ These details about preprocessing can be found [here](Preprocessing_Details.pdf)
 
 ## Goals
 In our project we try to answer the following two questions:
-1. Identify the most significant factors contributing to poor mental health prevalence. [Detailed Report](Feature_Importance.md) [Notebook](notebooks/random_forest_xg_boost.ipynb)
-2. Analyze the relationship between living conditions and mental health rates. [Detailed Report](Regression_Analysis.md) [Notebook](notebooks/reg.ipynb)
+1. Identify the most significant factors contributing to poor mental health prevalence. [Detailed Report](Feature_Importance.md) | [Notebook](notebooks/random_forest_xg_boost.ipynb)
+2. Analyze the relationship between living conditions and mental health rates. [Detailed Report](Regression_Analysis.md) | [Notebook](notebooks/reg.ipynb)
 
-## Feature Importance Analysis [Detailed Report](Feature_Importance.md) [Notebook](notebooks/random_forest_xg_boost.ipynb)
+## Feature Importance Analysis [Detailed Report](Feature_Importance.md) | [Notebook](notebooks/random_forest_xg_boost.ipynb)
 
 The analysis aimed to identify key predictors of mental health issues, specifically crude prevalence (MHLTH_CrudePrev) at the census tract level, using tree-based machine learning models and interpretability tools. Random Forest Regressor and XGBoost Regressor were employed to determine feature importance, while SHAP (SHapley Additive exPlanations) provided model-agnostic insights into the contributions of each feature.
 
@@ -38,7 +38,7 @@ Random Forest highlighted COGNITION_CrudePrev as the dominant predictor, while X
 ![image](https://github.com/user-attachments/assets/8b8502d3-8816-417b-9cc1-35dcdac130b5)
 
 
-## Regression Analysis for Mental Health Prevalence [Detailed Report](Regression_Analysis.md) [Notebook](notebooks/reg.ipynb)
+## Regression Analysis for Mental Health Prevalence [Detailed Report](Regression_Analysis.md) | [Notebook](notebooks/reg.ipynb)
 This analysis explores the relationship between socio-economic, housing, and mobility features and the prevalence of mental health distress (MHLTH_CrudePrev). Using linear, ridge, and lasso regression models, the study identifies key factors that influence mental distress, with the goal of informing public health interventions.
 
 #### Key Findings:
