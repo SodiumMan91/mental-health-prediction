@@ -20,12 +20,12 @@ In addition to combining the three datasets, our pre-processing work included:
 4. Performed one hot encoding and min-max scaling as appropriate for categorical and numeric features respectively
 5. Log-transformed our target variable to have a more normal shaped target
 
-These details about preprocessing can be found [here](Preprocessing_Details.pdf)
+These details about preprocessing can be found [here](https://github.com/SodiumMan91/mental-health-prediction/blob/main/Preprocessing_Details.pdf)
 
-## Goals | [Overall Report](Report.md)
+# Goals | [Overall Report](https://github.com/SodiumMan91/mental-health-prediction/blob/main/Report.md)
 In our project we try to answer the following two questions:
-1. Identify the most significant factors contributing to poor mental health prevalence. [Detailed Report](Feature_Importance.md) | [Notebook](notebooks/random_forest_xg_boost.ipynb)
-2. Analyze the relationship between living conditions and mental health rates. [Detailed Report](Regression_Analysis.md) | [Notebook](notebooks/reg.ipynb)
+1. Identify the most significant factors contributing to poor mental health prevalence. [Detailed Report](https://github.com/SodiumMan91/mental-health-prediction/blob/main/Feature_Importance.md) | [Notebook](https://github.com/SodiumMan91/mental-health-prediction/blob/main/notebooks/random_forest_xg_boost.ipynb)
+2. Analyze the relationship between living conditions and mental health rates. [Detailed Report](https://github.com/SodiumMan91/mental-health-prediction/blob/main/Regression_Analysis.md) | [Notebook](https://github.com/SodiumMan91/mental-health-prediction/blob/main/notebooks/reg_SLD_data_on_mental_health.ipynb)
 
 ## Feature Importance Analysis [Detailed Report](Feature_Importance.md) | [Notebook](notebooks/random_forest_xg_boost.ipynb)
 
